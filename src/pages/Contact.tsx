@@ -1,4 +1,4 @@
-import { Suspense, useRef, useState } from "react";
+import { Suspense, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
 import Loader from "../components/Loader";
@@ -11,16 +11,18 @@ const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState("idle");
   const { alert, hideAlert, showAlert } = useAlert();
-  const handleChange = (e) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleChange = (e: any) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
-  const handleFocus = (e) => {
+  const handleFocus = () => {
     setCurrentAnimation("walk");
   };
-  const handleBlur = (e) => {
+  const handleBlur = () => {
     setCurrentAnimation("idle");
   };
-  const handleSubmit = (e: Event) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     setCurrentAnimation("hit");
     setIsLoading(true);
@@ -126,6 +128,8 @@ const Contact = () => {
             <ambientLight intensity={0.5} />
             <Fox
               currentAnimation={currentAnimation}
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              //@ts-ignore
               position={[0.5, 0.35, 0]}
               rotation={[12.5, -0.6, 0]}
               scale={[0.5, 0.5, 0.5]}
