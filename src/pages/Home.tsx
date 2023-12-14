@@ -39,7 +39,7 @@ const Home = () => {
   return (
     <section className="w-full h-screen relative">
       <div className="absolute top-28 left-0 right-0 z-10 flex justify-center items-center">
-       {currentStage && <HomeInfo currentStage={currentStage}/>}
+        {currentStage && <HomeInfo currentStage={currentStage} />}
       </div>
       <Canvas
         className={`w-full h-screen bg-transparent ${
@@ -54,6 +54,8 @@ const Home = () => {
           <Bird />
           <Plane
             isRotating={isRotating}
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            //@ts-ignore
             position={planeScreen}
             rotation={[0, 20.1, 0]}
             scale={PlaneScale}

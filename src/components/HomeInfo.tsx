@@ -6,7 +6,7 @@ interface Props {
   btnText: string;
 }
 interface PropsHome {
-  currentStage?: number ;
+  currentStage: number;
 }
 
 const InfoBox = ({ text, link, btnText }: Props) => {
@@ -29,22 +29,40 @@ const renderContent = {
       <span className="font-semibold mx-2 text-white">Alireza</span>
       👋
       <br />A Software Engineer from Germany 🇩🇪
-
-
     </h1>
   ),
   2: (
     <InfoBox
-      text={"Worked with many companies and picked up many skills along the way"}
+      text={
+        "Worked with many companies and picked up many skills along the way"
+      }
       btnText={"Learn more"}
       link={"/About"}
     />
   ),
-  3: <InfoBox text={"Led multiple projects to success over the years. Curious about the impact?"} btnText={"Visit my portfolio"} link={"/"} />,
-  4: <InfoBox text={"Need a project done or looking for a dev? I'm just a few keystrokes away"} btnText={"Let's talk"} link={"/Contact"} />,
+  3: (
+    <InfoBox
+      text={
+        "Led multiple projects to success over the years. Curious about the impact?"
+      }
+      btnText={"Visit my portfolio"}
+      link={"/"}
+    />
+  ),
+  4: (
+    <InfoBox
+      text={
+        "Need a project done or looking for a dev? I'm just a few keystrokes away"
+      }
+      btnText={"Let's talk"}
+      link={"/Contact"}
+    />
+  ),
 };
 
 const HomeInfo = ({ currentStage }: PropsHome) => {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   return renderContent[currentStage] || null;
 };
 

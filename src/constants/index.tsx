@@ -26,6 +26,8 @@ import {
   sass,
   tailwindcss,
   typescript,
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
 } from "../assets/icons";
 
 export const skills = [
