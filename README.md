@@ -1,30 +1,47 @@
-# React + TypeScript + Vite
+# React-ThreeJS Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the source code for my personal portfolio website built using React and Three.js. It showcases my projects and provides an interactive 3D experience for visitors.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Introduction
+This project is a modern and visually appealing portfolio website created using React for the user interface and Three.js for the 3D graphics. It aims to provide a unique and immersive experience for visitors while highlighting my skills and projects.
 
-## Expanding the ESLint configuration
+# Features
+Interactive 3D Environment: Utilizes Three.js to create a dynamic and interactive 3D background.
+Project Showcase: Showcases my projects in an organized and visually appealing manner.
+Responsive Design: Ensures a seamless experience on various devices and screen sizes.
+Easy Customization: The code is well-organized, making it easy to customize and add new projects.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+# Installation
+1. Clone the repository:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```ruby
+https://github.com/itsalir/Portfolio.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Change into the project directory:
+
+ ```ruby
+cd portfolio
+```
+
+3. Install dependencies:
+
+ ```ruby
+npm install
+```
+
+# Usage
+
+1. Start the development server:
+
+ ```ruby
+npm run dev
+```
+
+
+# Contributing
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+
