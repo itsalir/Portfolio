@@ -1,5 +1,7 @@
 # React-ThreeJS Portfolio
 
+<img width="1500" alt="Screenshot 2023-12-14 at 10 34 27" src="https://github.com/itsalir/Portfolio/assets/51325450/040965c6-4e15-4844-b736-9f7cbeb02a97">
+
 This repository contains the source code for my personal portfolio website built using React and Three.js. It showcases my projects and provides an interactive 3D experience for visitors.
 
 
