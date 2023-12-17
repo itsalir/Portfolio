@@ -2580,6 +2580,11 @@ react-dom@^18.0.0, react-dom@^18.2.0, react-dom@>=16.13, react-dom@>=16.8, react
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
+react-hotjar@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.npmjs.org/react-hotjar/-/react-hotjar-6.1.0.tgz"
+  integrity sha512-V1UJixDMspAIrbGIFG282U7mH2aK1JBid0YR8F9oscb6lTkjMga+gst2gesxJDsqsax+k+lM1LqRXYzmUu8izA==
+
 react-intersection-observer@^8.26.2:
   version "8.34.0"
   resolved "https://registry.npmjs.org/react-intersection-observer/-/react-intersection-observer-8.34.0.tgz"

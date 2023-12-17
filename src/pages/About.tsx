@@ -3,12 +3,18 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 
-
 import "react-vertical-timeline-component/style.min.css";
-import CTA from "../components/CTA";
+import CTA from "../Components/CTA";
 import { experiences, skills } from "../constants";
+import { useEffect } from "react";
+import { hotjar } from "react-hotjar";
 
 const About = () => {
+  useEffect(() => {
+    if (hotjar.initialized()) {
+      hotjar.stateChange("/About");
+    }
+  }, []);
   return (
     <section className="max-container">
       <h1 className="head-text">

@@ -1,10 +1,11 @@
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
-import Loader from "../components/Loader";
+import Loader from "../Components/Loader";
 import { Fox } from "../models/Fox";
 import useAlert from "../hooks/useAlert";
-import Alert from "../components/Alert";
+import Alert from "../Components/Alert";
+import { hotjar } from "react-hotjar";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -21,6 +22,11 @@ const Contact = () => {
   const handleBlur = () => {
     setCurrentAnimation("idle");
   };
+  useEffect(() => {
+    if (hotjar.initialized()) {
+      hotjar.stateChange("/Contact");
+    }
+  }, []);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleSubmit = (e: any) => {
     e.preventDefault();
