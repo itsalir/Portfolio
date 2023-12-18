@@ -4,6 +4,8 @@ import {
   zista_sadr_saba_logo,
   logo_blue,
   digikala_logo,
+  Reva,
+  Taliya,
 } from "../assets/images";
 
 import {
@@ -20,7 +22,6 @@ import {
   mui,
   nextjs,
   nodejs,
-  pricewise,
   react,
   redux,
   sass,
@@ -201,10 +202,19 @@ export const socialLinks = [
 
 export const projects = [
   {
-    iconUrl: pricewise,
+    iconUrl: Taliya,
     theme: "",
-    name: "",
-    description: "",
-    link: "",
+    name: "taliya (Taliya Communications)",
+    description:
+      "As a Flutter developer, I took the lead in crafting a multi-platform solution for Taliya Communications, Iran's pioneering independent pre-paid mobile network operator. The Taliya project aimed to enhance user experience and accessibility across Android, iOS, and PWA (Progressive Web App) platforms, ensuring a seamless connection for users nationwide.",
+    link: "https://my.taliya.ir/",
+  },
+  {
+    iconUrl: Reva,
+    theme: "",
+    name: "Revacity",
+    description:
+      "Real Estate Virtual Agent 🏠: Revolutionizing residential real estate not only in Poland but across Europe, REVA seamlessly connects tenants and landlords through its cutting-edge technology. Skills: React.js, TypeScript, Next.js, AWS, SASS, Tailwind CSS, Agile Methodologies. This project is tailored to the European market, with a specific focus on providing innovative solutions for the real estate landscape in Poland.",
+    link: "https://revacity.co/",
   },
 ];

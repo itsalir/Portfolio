@@ -1,15 +1,21 @@
-import { Suspense, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import Loader from "../components/Loader";
+import Loader from "../Components/Loader";
 import { Island } from "../models/island";
 import { Sky } from "../models/Sky";
 import Plane from "../models/Plane";
 import { Bird } from "../models/Brid";
-import HomeInfo from "../components/HomeInfo";
+import HomeInfo from "../Components/HomeInfo";
+import { hotjar } from "react-hotjar";
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState<boolean>(false);
   const [currentStage, setCurrentStage] = useState<number>(1);
+  useEffect(() => {
+    if (hotjar.initialized()) {
+      hotjar.stateChange("/Home");
+    }
+  },[])
   const adjustIslandForScreenSize = () => {
     let screenScale: Array<number> | null = null;
     const screenPostion: Array<number> = [0, -6.5, -43];
